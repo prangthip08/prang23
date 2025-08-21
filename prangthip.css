@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #76f5ec, #e7fffd);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Cat base */
+  .cat {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 350px;
+    background-color: #99aaff;
+    border-radius: 50% 50%  ;
+  }
+  
+  /* Ears */
+  .ears {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 120px solid #99aaff;
+    top: -50px;
+  }
+  
+  .left-ear {
+    left: 4px;
+    transform: rotate(-20deg);
+  }
+  
+  .right-ear {
+    right: 4px;
+    transform: rotate(20deg);
+  }
+  
+  .inner-ear {
+    position: absolute;
+    top: 15px;
+    left: -60px;
+    width: 0;
+    height: 0;
+    border-left: 55px solid transparent;
+    border-right: 65px solid transparent;
+    border-bottom: 100px solid pink;
+  }
+  
+  /* Eyes */
+  .eyes {
+    position: absolute;
+    top: 140px;
+    width: 100px;
+    height: 100px;
+    background-color: #b3b3b3;
+    border-radius: 50%;
+  }
+  
+  .left-eye {
+    left: 100px;
+  }
+  
+  .right-eye {
+    right: 100px;
+  }
+  
+  .iris {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #0044aa;
+    border-radius: 50%;
+  }
+  
+  .pupil {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+  }
+
+  .pupil::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+  }
+  
+  @keyframes moveEye {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(10px);
+    }
+  }
+  
+  /* Nose */
+  .nose {
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 70px;
+    background-color: #0044aa;
+    border-radius: 50%;
+  }
+  
+  /* Thought bubbles */
+  .bubble {
+    position: absolute;
+    background-color: #a9cfff;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.8;
+  }
+  
+  .small {
+    width: 40px;
+    height: 40px;
+    top: 120px;
+    right: 300px;
+    animation-delay: 0s;
+  }
+  
+  .medium {
+    width: 60px;
+    height: 60px;
+    top: 60px;
+    right: 200px;
+    animation-delay: 1s;
+  }
+  
+  .large {
+    width: 200px;
+    height: 120px;
+    top: -30px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-delay: 2s;
+  }
+  
+  /* Thought text */
+  .text {
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 5px 5px #ff99cc, -2px -2px #ff99cc;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  /* Float animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }

@@ -1,0 +1,83 @@
+/* พื้นหลัง */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Tahoma", sans-serif;
+    background: linear-gradient(to bottom, #ffb6eb, #e8faff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* กล่องหลัก */
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+  }
+  
+  /* ฝั่งซ้าย (รูป) */
+  .left img {
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  
+    /* เริ่มเด้งเข้ามา */
+    opacity: 0;
+    transform: translateY(100px);
+    animation: bounceIn 1.5s ease forwards;
+  }
+  
+  /* ฝั่งขวา (ข้อความ) */
+  .right {
+    max-width: 500px;
+    text-align: left;
+    opacity: 0;
+    animation: fadeInRight 1.5s ease forwards;
+    animation-delay: 0.5s; /* ข้อความขึ้นช้ากว่ารูปนิดนึง */
+  }
+  
+  .right h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  .right p {
+    font-size: 1.3em;
+    margin: 10px 0;
+  }
+  
+  /* ปุ่มย้อนกลับ */
+  .back-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background: #ff66b2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .back-btn:hover {
+    background: #ff3399;
+    transform: scale(1.1);
+  }
+  
+  /* --- Animation --- */
+  @keyframes bounceIn {
+    0%   { opacity: 0; transform: translateY(100px) scale(0.9); }
+    60%  { opacity: 1; transform: translateY(-20px) scale(1.05); }
+    80%  { transform: translateY(10px) scale(0.98); }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+  }
+  
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
