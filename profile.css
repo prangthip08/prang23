@@ -1,4 +1,4 @@
-/* พื้นหลัง */
+
 body {
     margin: 0;
     padding: 0;
@@ -10,7 +10,6 @@ body {
     height: 100vh;
   }
   
-  /* กล่องหลัก */
   .container {
     display: flex;
     align-items: center;
@@ -19,19 +18,19 @@ body {
     padding: 20px;
   }
   
-  /* ฝั่งซ้าย (รูป) */
+ 
   .left img {
     width: 350px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
   
-    /* เริ่มเด้งเข้ามา */
+  
     opacity: 0;
     transform: translateY(100px);
     animation: bounceIn 1.5s ease forwards;
   }
   
-  /* ฝั่งขวา (ข้อความ) */
+ 
   .right {
     max-width: 500px;
     text-align: left;
@@ -51,7 +50,7 @@ body {
     margin: 10px 0;
   }
   
-  /* ปุ่มย้อนกลับ */
+
   .back-btn {
     margin-top: 20px;
     padding: 10px 20px;
@@ -69,7 +68,7 @@ body {
     transform: scale(1.1);
   }
   
-  /* --- Animation --- */
+
   @keyframes bounceIn {
     0%   { opacity: 0; transform: translateY(100px) scale(0.9); }
     60%  { opacity: 1; transform: translateY(-20px) scale(1.05); }
